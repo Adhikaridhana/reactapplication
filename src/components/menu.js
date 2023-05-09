@@ -5,7 +5,7 @@ export const Menu = () => {
   const [menuItem,setMenuItem]=useState('')
   useEffect(()=>{
     let pathname = window.location.pathname;
-    setMenuItem(pathname.slice(1));
+    setMenuItem(pathname.slice(1)  || 'home');
   })
   const fnMenuClick=(eve)=>{
     setMenuItem(eve.target.id);
